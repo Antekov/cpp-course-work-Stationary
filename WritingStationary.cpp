@@ -8,12 +8,4 @@ namespace Stationary {
 	void WritingStationary::print(DataGridView^ dgw) {
 
 	}
-
-	void static Stationary::MarshalString(String^ s, std::string& os) {
-		using namespace Runtime::InteropServices;
-		const char* chars =
-			(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
-		os = chars;
-		Marshal::FreeHGlobal(IntPtr((void*)chars));
-	}
 }

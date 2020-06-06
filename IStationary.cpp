@@ -1,6 +1,6 @@
 #include "IStationary.h"
 namespace Stationary {
-	void static Stationary::MarshalString(String^ s, std::string& os) {
+	void extern MarshalString(String^ s, std::string& os) {
 		using namespace Runtime::InteropServices;
 		const char* chars =
 			(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
@@ -18,3 +18,4 @@ namespace Stationary {
 	System::String^ IStationary::Name() { return gcnew String(name.c_str()); }
 	double IStationary::Price() { return price; }
 }
+

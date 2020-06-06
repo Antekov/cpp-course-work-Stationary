@@ -1,4 +1,4 @@
-#include "Pen.h"
+﻿#include "Pen.h"
 namespace Stationary {
 	Pen::Pen() : WritingStationary("ErichKrause", 10, "blue"),
 		type("Ball"), model("PL-1") {}
@@ -7,8 +7,8 @@ namespace Stationary {
 		System::String^ color,
 		System::String^ type,
 		System::String^ model) : WritingStationary(name, price, color) {
-		Stationary::MarshalString(type, this->type);
-		Stationary::MarshalString(model, this->model);
+		MarshalString(type, this->type);
+		MarshalString(model, this->model);
 	}
 
 	bool Pen::operator<(const IStationary& other) {
@@ -32,14 +32,20 @@ namespace Stationary {
 			&& color == pen.color && type == pen.type && model == pen.model);
 	}
 
+	String^ Pen::Color() { return gcnew String(color.c_str()); }
+	void Pen::Color(String^ color) { MarshalString(color, this->color);	}
+
+	String^ Pen::Type() { return gcnew String(type.c_str()); }
+	void Pen::Type(String^ type) { MarshalString(type, this->type); }
+
 	void Pen::print(DataGridView^ dgw) {
 		dgw->Rows->Add();
 		DataGridViewRow^ row = dgw->Rows[dgw->Rows->Count - 1];
 
-		row->Cells[0]->Value = "xdvkhdvk";
-		row->Cells[1]->Value = gcnew String("dfkghfk");
-		row->Cells[2]->Value = "fgredrg";
-		row->Cells[3]->Value = "drghrg";
+		row->Cells[0]->Value = gcnew String(u8"Ручка");
+		row->Cells[1]->Value = Name();
+		row->Cells[2]->Value = Price();
+		row->Cells[3]->Value = u8"Цвет: " + Color() + u8"; Тип: " + Type();
 
 	}
 
@@ -61,11 +67,5 @@ namespace Stationary {
 		price = Convert::ToDouble(f->ReadLine());
 	};
 
-	void static Stationary::MarshalString(String^ s, std::string& os) {
-		using namespace Runtime::InteropServices;
-		const char* chars =
-			(const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
-		os = chars;
-		Marshal::FreeHGlobal(IntPtr((void*)chars));
-	}
+	
 }

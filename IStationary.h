@@ -32,7 +32,8 @@ namespace Stationary {
 		double Price();
 	};
 
-	void static MarshalString(String^ s, std::string& os);
+	void extern MarshalString(String^ s, std::string& os);
 }
+
 
 
