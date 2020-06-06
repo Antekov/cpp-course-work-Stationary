@@ -13,7 +13,7 @@ namespace Stationary {
 
 	class IStationary
 	{
-
+	
 	protected:
 		std::string name;
 		double price;
@@ -29,7 +29,10 @@ namespace Stationary {
 		virtual void load(StreamReader^ f) = 0;
 
 		System::String^ Name();
+		void Name(String^ name);
+
 		double Price();
+		void Price(double price);
 	};
 
 	void extern MarshalString(String^ s, std::string& os);
