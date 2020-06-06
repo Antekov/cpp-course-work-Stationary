@@ -10,6 +10,8 @@ namespace Stationary {
 		static StationaryContainer<IStationary*> pointersContainer;
 		static ItemsContainer<Pen*> penItems;
 
+		static void Clear();
+
 		static void Load(String^ filename);
 		static void Save(String^ filename);
 

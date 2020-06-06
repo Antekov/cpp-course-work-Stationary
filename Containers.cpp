@@ -15,7 +15,7 @@ namespace Stationary {
 
 			if (type == "Pen") {
 				st = new Pen();
-				Containers::penItems[0] = ((Pen *) st);	
+				Containers::penItems.push_back((Pen*)st);	
 			}
 			else if (type == "Pencil") {
 				//st = new Pencil();
@@ -43,5 +43,14 @@ namespace Stationary {
 		for (auto& item : pointersContainer) {
 			item->print(dgv);
 		}
+	}
+
+	void Containers::Clear() {
+		for (int i = 0; i < Containers::penItems.getSize(); i++) {
+			if (Containers::penItems[i] != nullptr) {
+				delete Containers::penItems[i];
+			}
+		}
+		
 	}
 }
