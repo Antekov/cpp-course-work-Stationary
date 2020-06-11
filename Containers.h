@@ -9,6 +9,7 @@ namespace Stationary {
 	public:
 		static StationaryContainer<IStationary*> pointersContainer;
 		static ItemsContainer<Pen*> penItems;
+		static ItemsContainer<Pen*> pencilItems;
 
 		static void Clear();
 

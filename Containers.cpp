@@ -3,6 +3,7 @@
 namespace Stationary {
 	StationaryContainer<IStationary*> Containers::pointersContainer;
 	ItemsContainer<Pen*> Containers::penItems;
+	ItemsContainer<Pen*> Containers::pencilItems;
 
 	void Containers::Load(String^ filename) {
 		StreamReader f(filename);
@@ -18,8 +19,8 @@ namespace Stationary {
 				Containers::penItems.push_back((Pen*)st);	
 			}
 			else if (type == "Pencil") {
-				//st = new Pencil();
-				//pencils[pencilsCount++] = (Pencil*) st;
+				st = new Pen();
+				Containers::pencilItems.push_back((Pen*)st);
 			}
 			else if (type == "Brush") {
 				//st = new Brush();
@@ -35,7 +36,27 @@ namespace Stationary {
 	}
 
 	void Containers::Save(String^ filename) {
+		StreamWriter f(filename);
+		/*
+		for (size_t i = 0; i < Containers::penItems.getSize(); i++) {
+			if (Containers::penItems[i] != nullptr) {
+				delete Containers::penItems[i];
+			}
+		}
+		for (auto item : Containers::penItems) {
+			if 
+			f.WriteLine("Pen");
+			item->save(%f);
+		}
 
+		/*
+		for (auto item : Containers::pencilItems) {
+			f.WriteLine("Pencil");
+			item->save(% f);
+		}
+		*/
+		
+		f.Close();
 	}
 
 	void Containers::ShowAll(DataGridView^ dgv) {
@@ -46,9 +67,15 @@ namespace Stationary {
 	}
 
 	void Containers::Clear() {
-		for (int i = 0; i < Containers::penItems.getSize(); i++) {
+		for (size_t i = 0; i < Containers::penItems.getSize(); i++) {
 			if (Containers::penItems[i] != nullptr) {
 				delete Containers::penItems[i];
+				Containers::penItems[i] = nullptr;
+			}
+		}
+		for (size_t i = 0; i < Containers::pencilItems.getSize(); i++) {
+			if (Containers::pencilItems[i] != nullptr) {
+				delete Containers::pencilItems[i];
 			}
 		}
 		
