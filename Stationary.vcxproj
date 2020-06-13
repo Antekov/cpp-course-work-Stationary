@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="BaseContainer.cpp" />
     <ClCompile Include="Containers.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="IStationary.cpp" />
     <ClCompile Include="ItemsContainer.cpp" />
     <ClCompile Include="MyForm.cpp" />
@@ -146,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="BaseContainer.h" />
     <ClInclude Include="Containers.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="IStationary.h" />
     <ClInclude Include="ItemsContainer.h" />
     <ClInclude Include="MyForm.h">

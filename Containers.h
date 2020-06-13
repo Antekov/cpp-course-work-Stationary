@@ -11,11 +11,8 @@ namespace Stationary {
 		static ItemsContainer<Pen*> penItems;
 		static ItemsContainer<Pen*> pencilItems;
 
-		static void Clear();
+		
 
-		static void Load(String^ filename);
-		static void Save(String^ filename);
-
-		static void ShowAll(DataGridView^ dgv);
+		
 	};
 }

@@ -51,20 +51,19 @@ namespace Stationary {
 
 	void Pen::save(StreamWriter^ f) {
 		f->WriteLine("Pen");
-		f->WriteLine(gcnew String(type.c_str()));
-		f->WriteLine(gcnew String(model.c_str()));
-
-		f->WriteLine(gcnew String(color.c_str()));
 		f->WriteLine(gcnew String(name.c_str()));
 		f->WriteLine(price);
+		f->WriteLine(gcnew String(color.c_str()));
+		f->WriteLine(gcnew String(type.c_str()));
+		f->WriteLine(gcnew String(model.c_str()));
 	};
 
 	void Pen::load(StreamReader^ f) {
-		MarshalString(f->ReadLine(), type);
-		MarshalString(f->ReadLine(), model);
-		MarshalString(f->ReadLine(), color);
 		MarshalString(f->ReadLine(), name);
 		price = Convert::ToDouble(f->ReadLine());
+		MarshalString(f->ReadLine(), color);
+		MarshalString(f->ReadLine(), type);
+		MarshalString(f->ReadLine(), model);
 	};
 
 	

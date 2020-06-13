@@ -12,6 +12,10 @@ namespace Stationary {
 			BaseContainer::push_back(st);
 		}
 
+		void clear() {
+			BaseContainer::clear();
+		}
+
 		iterator begin() {
 			return BaseContainer::begin();
 		}
