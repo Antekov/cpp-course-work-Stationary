@@ -1,5 +1,6 @@
 #pragma once
 #include "Pen.h"
+#include "Pencil.h"
 #include "StationaryContainer.h"
 #include "ItemsContainer.h"
 
@@ -9,7 +10,7 @@ namespace Stationary {
 	public:
 		static StationaryContainer<IStationary*> pointersContainer;
 		static ItemsContainer<Pen*> penItems;
-		static ItemsContainer<Pen*> pencilItems;
+		static ItemsContainer<Pencil*> pencilItems;
 
 		
 

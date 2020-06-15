@@ -140,6 +140,8 @@
     <ClCompile Include="ItemsContainer.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Pen.cpp" />
+    <ClCompile Include="Pencil.cpp" />
+    <ClCompile Include="pencilForm.cpp" />
     <ClCompile Include="penForm.cpp" />
     <ClCompile Include="StationaryContainer.cpp" />
     <ClCompile Include="WritingStationary.cpp" />
@@ -154,6 +156,10 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Pen.h" />
+    <ClInclude Include="Pencil.h" />
+    <ClInclude Include="pencilForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="penForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -163,6 +169,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pencilForm.resx">
+      <DependentUpon>pencilForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="penForm.resx">
       <DependentUpon>penForm.h</DependentUpon>

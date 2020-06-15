@@ -2,7 +2,9 @@
 
 namespace Stationary {
 	void Controller::Load(String^ filename) {
-		StreamReader f(filename);
+		StreamReader f(filename, System::Text::Encoding::GetEncoding("windows-1251"));
+
+		Clear();
 
 		while (!f.EndOfStream) {
 			String^ type;
@@ -15,8 +17,8 @@ namespace Stationary {
 				Containers::penItems.push_back((Pen*)st);
 			}
 			else if (type == "Pencil") {
-				st = new Pen();
-				Containers::pencilItems.push_back((Pen*)st);
+				st = new Pencil();
+				Containers::pencilItems.push_back((Pencil*)st);
 			}
 			else if (type == "Brush") {
 				//st = new Brush();
@@ -32,11 +34,17 @@ namespace Stationary {
 	}
 
 	void Controller::Save(String^ filename) {
-		StreamWriter f(filename);
+		StreamWriter f(filename, false, System::Text::Encoding::GetEncoding("windows-1251"));
 		
 		for (size_t i = 0; i < Containers::penItems.getSize(); i++) {
 			if (Containers::penItems[i] != nullptr) {
 				Containers::penItems[i]->save(% f);
+			}
+		}
+
+		for (size_t i = 0; i < Containers::pencilItems.getSize(); i++) {
+			if (Containers::pencilItems[i] != nullptr) {
+				Containers::pencilItems[i]->save(% f);
 			}
 		}
 	
@@ -60,8 +68,10 @@ namespace Stationary {
 		for (size_t i = 0; i < Containers::pencilItems.getSize(); i++) {
 			if (Containers::pencilItems[i] != nullptr) {
 				delete Containers::pencilItems[i];
+				Containers::pencilItems[i] = nullptr;
 			}
 		}
 
+		Containers::pointersContainer.clear();
 	}
 }

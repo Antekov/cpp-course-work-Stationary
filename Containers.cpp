@@ -3,7 +3,7 @@
 namespace Stationary {
 	StationaryContainer<IStationary*> Containers::pointersContainer;
 	ItemsContainer<Pen*> Containers::penItems;
-	ItemsContainer<Pen*> Containers::pencilItems;
+	ItemsContainer<Pencil*> Containers::pencilItems;
 
 	
 }

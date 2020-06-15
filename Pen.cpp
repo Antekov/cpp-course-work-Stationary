@@ -36,7 +36,10 @@ namespace Stationary {
 	void Pen::Color(String^ color) { MarshalString(color, this->color);	}
 
 	String^ Pen::Type() { return gcnew String(type.c_str()); }
-	void Pen::Type(String^ type) { MarshalString(type, this->type); }
+	void Pen::Type(String^ model) { MarshalString(model, this->model); }
+
+	String^ Pen::Model() { return gcnew String(type.c_str()); }
+	void Pen::Model(String^ model) { MarshalString(model, this->model); }
 
 	void Pen::print(DataGridView^ dgw) {
 		dgw->Rows->Add();

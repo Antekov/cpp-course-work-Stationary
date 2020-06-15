@@ -23,6 +23,7 @@ namespace Stationary {
 		if (price < 0) {
 			throw InvalidPriceException();
 		}
+		this->price = price;
 	}
 }
 
