@@ -58,6 +58,13 @@ namespace Stationary {
 		}
 	}
 
+	void Controller::ShowSearchResult(DataGridView^ dgv) {
+		dgv->Rows->Clear();
+		for (auto& item : Containers::searchResultContainer) {
+			item->print(dgv);
+		}
+	}
+
 	void Controller::Clear() {
 		for (size_t i = 0; i < Containers::penItems.getSize(); i++) {
 			if (Containers::penItems[i] != nullptr) {

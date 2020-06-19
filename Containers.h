@@ -9,11 +9,9 @@ namespace Stationary {
 	{
 	public:
 		static StationaryContainer<IStationary*> pointersContainer;
+		static StationaryContainer<IStationary*> searchResultContainer;
 		static ItemsContainer<Pen*> penItems;
 		static ItemsContainer<Pencil*> pencilItems;
 
-		
-
-		
 	};
 }

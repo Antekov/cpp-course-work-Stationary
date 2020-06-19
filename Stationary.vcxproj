@@ -134,11 +134,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseContainer.cpp" />
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Circular.cpp" />
     <ClCompile Include="Containers.cpp" />
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="DrawingStationary.cpp" />
     <ClCompile Include="IStationary.cpp" />
     <ClCompile Include="ItemsContainer.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="PaintingStationary.cpp" />
     <ClCompile Include="Pen.cpp" />
     <ClCompile Include="Pencil.cpp" />
     <ClCompile Include="pencilForm.cpp" />
@@ -148,13 +152,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseContainer.h" />
+    <ClInclude Include="Board.h" />
+    <ClInclude Include="Circular.h" />
     <ClInclude Include="Containers.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="DrawingStationary.h" />
     <ClInclude Include="IStationary.h" />
     <ClInclude Include="ItemsContainer.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PaintingStationary.h" />
     <ClInclude Include="Pen.h" />
     <ClInclude Include="Pencil.h" />
     <ClInclude Include="pencilForm.h">
@@ -163,6 +171,7 @@
     <ClInclude Include="penForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="StationaryContainer.h" />
     <ClInclude Include="WritingStationary.h" />
   </ItemGroup>
@@ -176,6 +185,9 @@
     <EmbeddedResource Include="penForm.resx">
       <DependentUpon>penForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Stationary.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
