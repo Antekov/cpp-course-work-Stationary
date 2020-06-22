@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClCompile Include="BaseContainer.cpp" />
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="boardForm.cpp" />
     <ClCompile Include="Brush.cpp" />
     <ClCompile Include="Circular.cpp" />
     <ClCompile Include="circularForm.cpp" />
@@ -158,6 +159,9 @@
   <ItemGroup>
     <ClInclude Include="BaseContainer.h" />
     <ClInclude Include="Board.h" />
+    <ClInclude Include="boardForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Brush.h" />
     <ClInclude Include="Circular.h" />
     <ClInclude Include="circularForm.h">
@@ -185,6 +189,9 @@
     <ClInclude Include="WritingStationary.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="boardForm.resx">
+      <DependentUpon>boardForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="circularForm.resx">
       <DependentUpon>circularForm.h</DependentUpon>
     </EmbeddedResource>

@@ -48,7 +48,7 @@ namespace Stationary {
 		row->Cells[0]->Value = gcnew String(L"Ручка");
 		row->Cells[1]->Value = Name();
 		row->Cells[2]->Value = Price();
-		row->Cells[3]->Value = L"Цвет: " + Color() + L"; Тип: " + Type();
+		row->Cells[3]->Value = L"Цвет: " + Color() + L"; Тип: " + Type() + L"; Модель: " + Model();
 
 	}
 
