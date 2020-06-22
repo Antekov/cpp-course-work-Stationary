@@ -11,7 +11,5 @@ namespace Stationary {
 		WritingStationary() : IStationary("", 0.0) {}
 
 		WritingStationary(System::String^ name, double price, System::String^ color);
-
-		void print(DataGridView^ dgw) override;
 	};
 }

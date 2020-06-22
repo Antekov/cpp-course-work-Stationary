@@ -135,7 +135,9 @@
   <ItemGroup>
     <ClCompile Include="BaseContainer.cpp" />
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Brush.cpp" />
     <ClCompile Include="Circular.cpp" />
+    <ClCompile Include="circularForm.cpp" />
     <ClCompile Include="Containers.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="DrawingStationary.cpp" />
@@ -143,6 +145,7 @@
     <ClCompile Include="ItemsContainer.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="PaintingStationary.cpp" />
+    <ClCompile Include="Paints.cpp" />
     <ClCompile Include="Pen.cpp" />
     <ClCompile Include="Pencil.cpp" />
     <ClCompile Include="pencilForm.cpp" />
@@ -153,7 +156,11 @@
   <ItemGroup>
     <ClInclude Include="BaseContainer.h" />
     <ClInclude Include="Board.h" />
+    <ClInclude Include="Brush.h" />
     <ClInclude Include="Circular.h" />
+    <ClInclude Include="circularForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Containers.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="DrawingStationary.h" />
@@ -163,6 +170,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PaintingStationary.h" />
+    <ClInclude Include="Paints.h" />
     <ClInclude Include="Pen.h" />
     <ClInclude Include="Pencil.h" />
     <ClInclude Include="pencilForm.h">
@@ -176,6 +184,9 @@
     <ClInclude Include="WritingStationary.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="circularForm.resx">
+      <DependentUpon>circularForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
@@ -185,9 +196,6 @@
     <EmbeddedResource Include="penForm.resx">
       <DependentUpon>penForm.h</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Stationary.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

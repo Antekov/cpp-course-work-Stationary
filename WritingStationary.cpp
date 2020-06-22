@@ -4,8 +4,4 @@ namespace Stationary {
 		IStationary(name, price) {
 		MarshalString(color, this->color);
 	}
-
-	void WritingStationary::print(DataGridView^ dgw) {
-
-	}
 }
