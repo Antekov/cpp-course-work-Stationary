@@ -20,10 +20,24 @@ namespace Stationary {
 				st = new Pencil();
 				Containers::pencilItems.push_back((Pencil*)st);
 			}
-			else if (type == "Brush") {
-				//st = new Brush();
-				//brushes[brushesCount++] = (Brush*) st;
+			else if (type == "Circular") {
+				st = new Circular();
+				Containers::circularItems.push_back((Circular*)st);
 			}
+			/*
+			else if (type == "Board") {
+				st = new Board();
+				Containers::boardItems.push_back((Board*)st);
+			}
+			else if (type == "Paints") {
+				st = new Paints();
+				Containers::paintsItems.push_back((Paints*)st);
+			}
+			else if (type == "Brush") {
+				st = new Brush();
+				Containers::brush.push_back((Brush*)st);
+			}
+			*/
 
 			if (st != nullptr) {
 				st->load(% f);
@@ -45,6 +59,30 @@ namespace Stationary {
 		for (size_t i = 0; i < Containers::pencilItems.getSize(); i++) {
 			if (Containers::pencilItems[i] != nullptr) {
 				Containers::pencilItems[i]->save(% f);
+			}
+		}
+
+		for (size_t i = 0; i < Containers::circularItems.getSize(); i++) {
+			if (Containers::circularItems[i] != nullptr) {
+				Containers::circularItems[i]->save(% f);
+			}
+		}
+
+		for (size_t i = 0; i < Containers::boardItems.getSize(); i++) {
+			if (Containers::boardItems[i] != nullptr) {
+				Containers::boardItems[i]->save(% f);
+			}
+		}
+
+		for (size_t i = 0; i < Containers::paintsItems.getSize(); i++) {
+			if (Containers::paintsItems[i] != nullptr) {
+				Containers::paintsItems[i]->save(% f);
+			}
+		}
+
+		for (size_t i = 0; i < Containers::brushItems.getSize(); i++) {
+			if (Containers::brushItems[i] != nullptr) {
+				Containers::brushItems[i]->save(% f);
 			}
 		}
 	
@@ -76,6 +114,30 @@ namespace Stationary {
 			if (Containers::pencilItems[i] != nullptr) {
 				delete Containers::pencilItems[i];
 				Containers::pencilItems[i] = nullptr;
+			}
+		}
+		for (size_t i = 0; i < Containers::circularItems.getSize(); i++) {
+			if (Containers::circularItems[i] != nullptr) {
+				delete Containers::circularItems[i];
+				Containers::circularItems[i] = nullptr;
+			}
+		}
+		for (size_t i = 0; i < Containers::boardItems.getSize(); i++) {
+			if (Containers::boardItems[i] != nullptr) {
+				delete Containers::boardItems[i];
+				Containers::boardItems[i] = nullptr;
+			}
+		}
+		for (size_t i = 0; i < Containers::paintsItems.getSize(); i++) {
+			if (Containers::paintsItems[i] != nullptr) {
+				delete Containers::paintsItems[i];
+				Containers::paintsItems[i] = nullptr;
+			}
+		}
+		for (size_t i = 0; i < Containers::brushItems.getSize(); i++) {
+			if (Containers::brushItems[i] != nullptr) {
+				delete Containers::brushItems[i];
+				Containers::brushItems[i] = nullptr;
 			}
 		}
 

@@ -23,9 +23,7 @@ namespace Stationary {
 
 		String^ Model();
 		void Model(String^ model);
-
-
-
+			   
 		bool operator<(const IStationary& other) override;
 		bool operator==(const IStationary& other) override;
 		void print(DataGridView^ dgv) override;

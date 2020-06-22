@@ -5,5 +5,5 @@ namespace Stationary {
 		public DrawingStationary
 	{
 	};
-}
 
+}
