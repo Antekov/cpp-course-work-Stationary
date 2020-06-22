@@ -1,6 +1,7 @@
 #pragma once
 #include <array>
 #include <algorithm>
+#include <string>
 namespace Stationary {
 	const size_t N = 100;
 

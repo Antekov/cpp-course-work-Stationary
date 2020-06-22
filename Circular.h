@@ -1,7 +1,9 @@
 #pragma once
 #include "DrawingStationary.h"
-class Circular :
-	public DrawingStationary
-{
-};
+namespace Stationary {
+	class Circular :
+		public DrawingStationary
+	{
+	};
+}
 

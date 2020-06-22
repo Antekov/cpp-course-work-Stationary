@@ -1,7 +1,8 @@
 #pragma once
 #include "IStationary.h"
-class PaintingStationary :
-	public IStationary
-{
-};
-
+namespace Stationary {
+	class PaintingStationary :
+		public IStationary
+	{
+	};
+}
