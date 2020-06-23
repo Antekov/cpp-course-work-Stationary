@@ -253,14 +253,14 @@ private: System::Void buttonCreateBoard_Click(System::Object^ sender, System::Ev
 	try {
 		price = Convert::ToDouble(textBoxPrice->Text);
 	}
-	catch (FormatException^ e) {
+	catch (FormatException^) {
 		textBoxPrice->Text = "";
 		isError = true;
 	}
 	try {
 		width = Convert::ToDouble(textBoxWidth->Text);
 	}
-	catch (FormatException^ e) {
+	catch (FormatException^) {
 		textBoxWidth->Text = "";
 		isError = true;
 	}
@@ -268,7 +268,7 @@ private: System::Void buttonCreateBoard_Click(System::Object^ sender, System::Ev
 	try {
 		height = Convert::ToDouble(textBoxHeight->Text);
 	}
-	catch (FormatException^ e) {
+	catch (FormatException^) {
 		textBoxHeight->Text = "";
 		isError = true;
 	}

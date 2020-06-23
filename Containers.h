@@ -20,6 +20,5 @@ namespace Stationary {
 		static ItemsContainer<Board*> boardItems;
 		static ItemsContainer<Paints*> paintsItems;
 		static ItemsContainer<Brush*> brushItems;
-
 	};
 }

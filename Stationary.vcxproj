@@ -139,6 +139,7 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="boardForm.cpp" />
     <ClCompile Include="Brush.cpp" />
+    <ClCompile Include="brushForm.cpp" />
     <ClCompile Include="Circular.cpp" />
     <ClCompile Include="circularForm.cpp" />
     <ClCompile Include="Containers.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="PaintingStationary.cpp" />
     <ClCompile Include="Paints.cpp" />
+    <ClCompile Include="paintsForm.cpp" />
     <ClCompile Include="Pen.cpp" />
     <ClCompile Include="Pencil.cpp" />
     <ClCompile Include="pencilForm.cpp" />
@@ -163,6 +165,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Brush.h" />
+    <ClInclude Include="brushForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Circular.h" />
     <ClInclude Include="circularForm.h">
       <FileType>CppForm</FileType>
@@ -177,6 +182,9 @@
     </ClInclude>
     <ClInclude Include="PaintingStationary.h" />
     <ClInclude Include="Paints.h" />
+    <ClInclude Include="paintsForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Pen.h" />
     <ClInclude Include="Pencil.h" />
     <ClInclude Include="pencilForm.h">
@@ -192,11 +200,17 @@
     <EmbeddedResource Include="boardForm.resx">
       <DependentUpon>boardForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="brushForm.resx">
+      <DependentUpon>brushForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="circularForm.resx">
       <DependentUpon>circularForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paintsForm.resx">
+      <DependentUpon>paintsForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pencilForm.resx">
       <DependentUpon>pencilForm.h</DependentUpon>

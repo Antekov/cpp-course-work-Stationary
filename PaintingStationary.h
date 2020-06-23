@@ -11,6 +11,8 @@ namespace Stationary {
 
 		PaintingStationary(System::String^ name, double price, System::String^ type);
 
+		String^ Type();
+		void Type(String^ type);
 	};
 }
 
