@@ -1,24 +1,15 @@
 #pragma once
-#include "IStationary.h"
+#include "Stationary.h"
 
 namespace Stationary {
 	class WritingStationary :
-		public IStationary
+		public Stationary
 	{
 	protected:
-		std::string name;
-		double price;
 		std::string color;
-		WritingStationary(System::String^ name, double price);
 	public:
-		WritingStationary() : WritingStationary(L"", 0.0) {}
+		WritingStationary() : WritingStationary("", 0.0, "blue") {}
 
 		WritingStationary(System::String^ name, double price, System::String^ color);
-
-		System::String^ Name();
-		void Name(String^ name);
-
-		double Price();
-		void Price(double price);
 	};
 }
