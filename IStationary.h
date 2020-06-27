@@ -13,26 +13,18 @@ namespace Stationary {
 
 	class IStationary
 	{
-	
-	protected:
-		std::string name;
-		double price;
-
 	public:
-		IStationary(System::String^ name, double price);
-		virtual ~IStationary() {};
-
 		virtual bool operator<(const IStationary& other) = 0;
 		virtual bool operator==(const IStationary& other) = 0;
 		virtual void print(DataGridView^ dgw) = 0;
 		virtual void save(StreamWriter^ f) = 0;
 		virtual void load(StreamReader^ f) = 0;
 
-		System::String^ Name();
-		void Name(String^ name);
+		virtual System::String^ Name() = 0;
+		virtual void Name(String^ name) = 0;
 
-		double Price();
-		void Price(double price);
+		virtual double Price() = 0;
+		virtual void Price(double price) = 0;
 	};
 
 	void extern MarshalString(String^ s, std::string& os);
