@@ -15,9 +15,6 @@ namespace Stationary {
 			System::String^ type="",
 			System::String^ model="");
 
-		String^ Color();
-		void Color(String^ color);
-
 		String^ Type();
 		void Type(String^ type);
 

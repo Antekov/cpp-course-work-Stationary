@@ -9,7 +9,9 @@ namespace Stationary {
 		std::string color;
 	public:
 		WritingStationary() : WritingStationary("", 0.0, "blue") {}
-
 		WritingStationary(System::String^ name, double price, System::String^ color);
+
+		String^ Color();
+		void Color(String^ color);
 	};
 }

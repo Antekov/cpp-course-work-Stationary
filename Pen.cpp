@@ -32,9 +32,6 @@ namespace Stationary {
 			&& color == pen.color && type == pen.type && model == pen.model);
 	}
 
-	String^ Pen::Color() { return gcnew String(color.c_str()); }
-	void Pen::Color(String^ color) { MarshalString(color, this->color);	}
-
 	String^ Pen::Type() { return gcnew String(type.c_str()); }
 	void Pen::Type(String^ model) { MarshalString(model, this->model); }
 

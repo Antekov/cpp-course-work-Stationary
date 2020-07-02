@@ -11,9 +11,6 @@ namespace Stationary {
 			double thickness = 0.5) : WritingStationary(name, price, color),
 			thickness(thickness) {}
 
-		String^ Color();
-		void Color(String^ color);
-
 		double Thickness();
 		void Thickness(double thickness);
 	

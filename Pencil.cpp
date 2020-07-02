@@ -1,10 +1,6 @@
 ﻿#include "Pencil.h"
 
 namespace Stationary {
-
-	String^ Pencil::Color() { return gcnew String(color.c_str()); }
-	void Pencil::Color(String^ color) { MarshalString(color, this->color); }
-
 	double Pencil::Thickness() { return thickness; }
 	void Pencil::Thickness(double thicness) {
 		if (thicness < 0) {
