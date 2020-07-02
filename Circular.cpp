@@ -1,12 +1,10 @@
 ﻿#include "Circular.h"
 namespace Stationary {
-	Circular::Circular() : DrawingStationary("", 0, "standart"), size("big") {}
+	Circular::Circular() : DrawingStationary("", 0, "standart", "big") {}
 
 	Circular::Circular(System::String^ name, double price,
 		System::String^ category,
-		System::String^ size) : DrawingStationary(name, price, category) {
-		MarshalString(size, this->size);
-	}
+		System::String^ size) : DrawingStationary(name, price, category, size) {}
 
 	bool Circular::operator<(const IStationary& other) {
 		if (typeid(other) != typeid(Circular)) {
@@ -28,9 +26,6 @@ namespace Stationary {
 		return (name == circular.name && price == circular.price
 			&& category == circular.category && size == circular.size);
 	}
-
-	String^ Circular::Size() { return gcnew String(size.c_str()); }
-	void Circular::Size(String^ size) { MarshalString(size, this->size); }
 
 	void Circular::print(DataGridView^ dgw) {
 		dgw->Rows->Add();

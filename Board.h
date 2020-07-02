@@ -4,7 +4,6 @@ namespace Stationary {
 	class Board :
 		public DrawingStationary
 	{
-        std::string size;
         std::string material;
         double width;
         double height;
@@ -14,9 +13,6 @@ namespace Stationary {
             String^ category = "standart", String^ size = "big",
             String^ material = "paper",
             double width = 5.5, double height = 7.7);
-
-		String^ Size();
-		void Size(String^ size);
 
 		String^ Material();
 		void Material(String^ material);

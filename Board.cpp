@@ -4,8 +4,7 @@ namespace Stationary {
     Board::Board(String^ name, double price,
         String^ category, String^ size,
         String^ material,
-        double width, double height) : DrawingStationary(name, price, category) {
-        MarshalString(size, this->size);
+        double width, double height) : DrawingStationary(name, price, category, size) {
         MarshalString(material, this->material);
     };
 
@@ -30,9 +29,6 @@ namespace Stationary {
 			&& category == board.category && size == board.size
 			&& width == board.width && height == board.height);
 	}
-
-	String^ Board::Size() { return gcnew String(size.c_str()); }
-	void Board::Size(String^ size) { MarshalString(size, this->size); }
 
 	String^ Board::Material() { return gcnew String(material.c_str()); }
 	void Board::Material(String^ material) { MarshalString(material, this->material); }
